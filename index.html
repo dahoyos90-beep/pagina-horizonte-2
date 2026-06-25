@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<!-- =========================================
+     HEAD
+========================================= -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizonte Urbano Inmobiliaria</title>
+
+```
+<!-- CSS Principal -->
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+<header>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="img/logo.jpg" alt="Horizonte Urbano Inmobiliaria">
+    </div>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="propiedades.html">Propiedades</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Asesor</a></li>
+            <li><a href="contacto.html">Contáctenos</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- =========================================
+     HERO SECTION
+========================================= -->
+/* =====================================================
+   HERO PRINCIPAL (CON CARRUSEL DE FONDO)
+===================================================== */
+
+<section class="hero-container">
+
+    <!-- CARRUSEL DE FONDO -->
+    <div class="hero-slides">
+
+        <img src="img/1.jpg" class="active" alt="Casa 1">
+        <img src="img/2.jpg" alt="Casa 2">
+        <img src="img/3.webp" alt="Casa 3">
+        <img src="img/images4.jpg" alt="Apartamento 1">
+
+    </div>
+
+    <!-- CONTENIDO DEL HERO -->
+    <div class="hero">
+
+        <!-- BUSCADOR -->
+        <div class="buscador-box">
+
+            <h3>BÚSQUEDA AVANZADA</h3>
+
+            <form class="grid-form">
+
+                <div class="campo">
+                    <label>Ciudad:</label>
+                    <input type="text">
+                </div>
+
+                <div class="campo">
+                    <label>Departamento:</label>
+                    <input type="text">
+                </div>
+
+                <div class="campo">
+                    <label>Barrio:</label>
+                    <input type="text">
+                </div>
+
+                <div class="campo">
+                    <label>Tipo:</label>
+                    <select>
+                        <option>Casa</option>
+                        <option>Apartamento</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label>Habitaciones:</label>
+                    <input type="number">
+                </div>
+
+                <div class="campo">
+                    <label>Desde:</label>
+                    <input type="number">
+                </div>
+
+                <div class="campo">
+                    <label>Hasta:</label>
+                    <input type="number">
+                </div>
+
+                <div class="campo">
+                    <label>Negocio:</label>
+                    <select>
+                        <option>Venta</option>
+                        <option>Arriendo</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-buscar">
+                    BUSCAR
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- TEXTO PRINCIPAL -->
+        <div class="hero-text">
+
+            <h1>Horizonte Urbano Inmobiliaria</h1>
+
+            <p>
+                Especialistas en Arrendamientos, Venta de Inmuebles y Administración de Propiedad Horizontal.
+            </p>
+
+            <a href="#propiedades" class="btn">
+                Ver Propiedades
+            </a>
+
+        </div>
+
+    </div>
+
+        <!-- ==============================
+             TEXTO PRINCIPAL
+        =============================== -->
+        <div class="hero-text">
+
+            <h1>Horizonte Urbano Inmobiliaria</h1>
+
+            <p>
+                Especialistas en Arrendamientos,
+                Venta de Inmuebles y Administración
+                de Propiedad Horizontal.
+            </p>
+
+            <a href="#propiedades" class="btn">
+                Ver Propiedades
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     SERVICIOS
+========================================= -->
+<section class="servicios">
+
+    <h2>Nuestros Servicios</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🏠 Arrendamientos</h3>
+            <p>Gestionamos el alquiler de inmuebles.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏡 Venta de Inmuebles</h3>
+            <p>Compra y venta segura de propiedades.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏢 Propiedad Horizontal</h3>
+            <p>Administración integral de conjuntos y edificios.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     PROPIEDADES DESTACADAS
+========================================= -->
+<section id="propiedades">
+
+    <h2>Propiedades Destacadas</h2>
+
+    <div class="grid">
+
+        <div class="property">
+            <img src="https://picsum.photos/400/250"
+                alt="Casa campestre en Armenia">
+
+            <h3>Casa Campestre</h3>
+            <p>$450.000.000</p>
+            <button>Ver Detalles</button>
+        </div>
+
+        <div class="property">
+            <img src="https://picsum.photos/401/250"
+                alt="Apartamento en Armenia">
+
+            <h3>Apartamento Centro</h3>
+            <p>$280.000.000</p>
+            <button>Ver Detalles</button>
+        </div>
+
+        <div class="property">
+            <img src="https://picsum.photos/402/250"
+                alt="Local Comercial">
+
+            <h3>Local Comercial</h3>
+            <p>$520.000.000</p>
+            <button>Ver Detalles</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     GOOGLE MAP
+========================================= -->
+<section class="mapa">
+
+    <h2>Ubicación</h2>
+
+   <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.789..." 
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</section>
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+<footer>
+
+    <!-- Quiénes Somos -->
+    <div class="quienes-somos">
+
+        <h3>Quiénes Somos</h3>
+
+        <p>
+            Somos una inmobiliaria con experiencia en
+            venta, alquiler y administración de propiedades
+            en Armenia, Quindío.
+        </p>
+
+    </div>
+
+    <!-- Información de Contacto -->
+    <div class="contacto">
+
+        <h3>Ubicación y Contacto</h3>
+
+        <p>
+            Calle 19 #14 - 17 Oficina 502 y 503,
+            Edificio Suramericana,
+            Armenia - Quindío
+        </p>
+
+        <p>
+            Tel:
+            <a href="tel:+573186566817">
+                +57 318 656 6817
+            </a>
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:horizonteurbano@gmail.com">
+                horizonteurbano@gmail.com
+            </a>
+        </p>
+
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="redes">
+
+        <a href="#">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+        <a href="https://wa.me/573186566817">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+    </div>
+
+</footer>
+
+<!-- =========================================
+     COPYRIGHT
+========================================= -->
+<div class="copyright">
+    © 2026 Horizonte Urbano Inmobiliaria | Todos los derechos reservados
+</div>
+
+<!-- =========================================
+     BOTÓN FLOTANTE WHATSAPP
+========================================= -->
+<a href="https://wa.me/573186566817"
+    class="whatsapp"
+    target="_blank">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+<script src="app.js"></script>
+
+</body>
+</html>

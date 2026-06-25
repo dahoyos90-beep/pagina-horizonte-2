@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Propiedades | Horizonte Urbano Inmobiliaria</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+
+        .banner{
+            background:#2E7D32;
+            color:white;
+            text-align:center;
+            padding:50px 20px;
+        }
+
+        .banner h1{
+            font-size:40px;
+            margin-bottom:10px;
+        }
+
+        .filtros{
+            padding:30px;
+            background:#f5f5f5;
+            display:flex;
+            gap:15px;
+            flex-wrap:wrap;
+            justify-content:center;
+        }
+
+        .filtros input,
+        .filtros select{
+            padding:12px;
+            width:250px;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        .filtros button{
+            background:#2E7D32;
+            color:white;
+            border:none;
+            padding:12px 25px;
+            cursor:pointer;
+            border-radius:5px;
+        }
+
+        .contenedor-propiedades{
+            max-width:1300px;
+            margin:auto;
+            padding:50px 20px;
+        }
+
+        .grid-propiedades{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+            gap:25px;
+        }
+
+        .propiedad{
+            background:white;
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow:0px 3px 10px rgba(0,0,0,0.15);
+            transition:.3s;
+        }
+
+        .propiedad:hover{
+            transform:translateY(-5px);
+        }
+
+        .propiedad img{
+            width:100%;
+            height:250px;
+            object-fit:cover;
+        }
+
+        .contenido{
+            padding:20px;
+        }
+
+        .precio{
+            color:#2E7D32;
+            font-size:24px;
+            font-weight:bold;
+            margin-bottom:10px;
+        }
+
+        .titulo{
+            font-size:22px;
+            margin-bottom:10px;
+        }
+
+        .ubicacion{
+            color:gray;
+            margin-bottom:15px;
+        }
+
+        .detalles{
+            display:flex;
+            justify-content:space-between;
+            margin-bottom:20px;
+        }
+
+        .boton{
+            width:100%;
+            background:#2E7D32;
+            color:white;
+            border:none;
+            padding:12px;
+            cursor:pointer;
+            border-radius:5px;
+            font-size:16px;
+        }
+
+        .boton:hover{
+            background:#256728;
+        }
+
+        .whatsapp{
+            position:fixed;
+            right:20px;
+            bottom:20px;
+            width:60px;
+            height:60px;
+            background:#25D366;
+            color:white;
+            border-radius:50%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-decoration:none;
+            font-size:30px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <img src="img/logo.png" alt="Horizonte Urbano">
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="propiedades.html">Propiedades</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<section class="banner">
+    <h1>Propiedades Disponibles</h1>
+    <p>Encuentra la propiedad ideal para ti</p>
+</section>
+
+<section class="filtros">
+
+    <input type="text" placeholder="Ciudad">
+
+    <select>
+        <option>Tipo de inmueble</option>
+        <option>Casa</option>
+        <option>Apartamento</option>
+        <option>Lote</option>
+        <option>Local Comercial</option>
+    </select>
+
+    <select>
+        <option>Operación</option>
+        <option>Venta</option>
+        <option>Arriendo</option>
+    </select>
+
+    <button>Buscar</button>
+
+</section>
+
+<section class="contenedor-propiedades">
+
+    <div class="grid-propiedades">
+
+        <div class="propiedad">
+
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+
+            <div class="contenido">
+
+                <div class="precio">
+                    $450.000.000
+                </div>
+
+                <div class="titulo">
+                    Casa Campestre
+                </div>
+
+                <div class="ubicacion">
+                    Armenia - Quindío
+                </div>
+
+                <div class="detalles">
+                    <span>4 Habitaciones</span>
+                    <span>3 Baños</span>
+                </div>
+
+                <button class="boton">
+                    Ver Detalles
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="propiedad">
+
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+
+            <div class="contenido">
+
+                <div class="precio">
+                    $280.000.000
+                </div>
+
+                <div class="titulo">
+                    Apartamento Moderno
+                </div>
+
+                <div class="ubicacion">
+                    Pereira - Risaralda
+                </div>
+
+                <div class="detalles">
+                    <span>3 Habitaciones</span>
+                    <span>2 Baños</span>
+                </div>
+
+                <button class="boton">
+                    Ver Detalles
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="propiedad">
+
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858">
+
+            <div class="contenido">
+
+                <div class="precio">
+                    $520.000.000
+                </div>
+
+                <div class="titulo">
+                    Local Comercial
+                </div>
+
+                <div class="ubicacion">
+                    Cali - Valle
+                </div>
+
+                <div class="detalles">
+                    <span>180 m²</span>
+                    <span>Centro</span>
+                </div>
+
+                <button class="boton">
+                    Ver Detalles
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="propiedad">
+
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750">
+
+            <div class="contenido">
+
+                <div class="precio">
+                    $650.000.000
+                </div>
+
+                <div class="titulo">
+                    Casa de Lujo
+                </div>
+
+                <div class="ubicacion">
+                    Medellín - Antioquia
+                </div>
+
+                <div class="detalles">
+                    <span>5 Habitaciones</span>
+                    <span>4 Baños</span>
+                </div>
+
+                <button class="boton">
+                    Ver Detalles
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<a
+href="https://wa.me/573186566817?text=Hola%20quiero%20información%20sobre%20una%20propiedad"
+class="whatsapp">
+
+💬
+
+</a>
+
+</body>
+</html>

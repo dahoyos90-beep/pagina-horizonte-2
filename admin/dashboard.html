@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Horizonte Urbano</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        <h2>🏢 Horizonte Urbano</h2>
+
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-home"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-building"></i>
+                Propiedades
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-users"></i>
+                Clientes
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-chart-line"></i>
+                Reportes
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fas fa-cog"></i>
+                Configuración
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="main-content">
+
+    <header>
+
+        <h1>Panel Administrativo</h1>
+
+    </header>
+
+    <section class="estadisticas">
+
+        <div class="card">
+            <h3>25</h3>
+            <p>Propiedades</p>
+        </div>
+
+        <div class="card">
+            <h3>14</h3>
+            <p>Clientes</p>
+        </div>
+
+        <div class="card">
+            <h3>7</h3>
+            <p>Arrendamientos</p>
+        </div>
+
+        <div class="card">
+            <h3>4</h3>
+            <p>Ventas</p>
+        </div>
+
+    </section>
+
+    <section class="formulario">
+
+        <h2>Registrar Propiedad</h2>
+
+        <form id="propiedadForm">
+
+            <input
+            type="text"
+            id="titulo"
+            placeholder="Título del inmueble"
+            required>
+
+            <input
+            type="text"
+            id="precio"
+            placeholder="Precio"
+            required>
+
+            <input
+            type="text"
+            id="ciudad"
+            placeholder="Ciudad"
+            required>
+
+            <select id="tipo">
+
+                <option value="">
+                    Tipo de inmueble
+                </option>
+
+                <option>
+                    Casa
+                </option>
+
+                <option>
+                    Apartamento
+                </option>
+
+                <option>
+                    Local Comercial
+                </option>
+
+                <option>
+                    Lote
+                </option>
+
+            </select>
+
+            <select id="operacion">
+
+                <option value="">
+                    Operación
+                </option>
+
+                <option>
+                    Venta
+                </option>
+
+                <option>
+                    Arriendo
+                </option>
+
+            </select>
+
+            <textarea
+            id="descripcion"
+            rows="5"
+            placeholder="Descripción">
+            </textarea>
+
+            <input
+            type="file"
+            id="imagen">
+
+            <button type="submit">
+
+                Guardar Propiedad
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <section class="tabla">
+
+        <h2>Propiedades Registradas</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Ciudad</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="tablaPropiedades">
+
+                <tr>
+
+                    <td>1</td>
+
+                    <td>Casa Campestre</td>
+
+                    <td>Armenia</td>
+
+                    <td>$450.000.000</td>
+
+                    <td>
+
+                        <button class="editar">
+                            Editar
+                        </button>
+
+                        <button class="eliminar">
+                            Eliminar
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
