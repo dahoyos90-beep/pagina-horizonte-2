@@ -1,38 +1,366 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
+<!-- =========================================
+     HEAD
+========================================= -->
 <head>
-<title>Dashboard</title>
-<link rel="stylesheet" href="dashboard.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctenos | Horizonte Urbano Inmobiliaria</title>
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- CSS exclusivo de esta página -->
+    <link rel="stylesheet" href="css/contacto.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-<h1>Panel Administrativo</h1>
 
-<form>
+<!-- =========================================
+     HEADER
+========================================= -->
+<header>
 
-<input type="text"
-placeholder="Título Propiedad">
+    <div class="logo">
+        <img src="img/logo.jpg" alt="Horizonte Urbano Inmobiliaria">
+    </div>
 
-<input type="text"
-placeholder="Precio">
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="propiedades.html">Propiedades</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html" class="active">Contáctenos</a></li>
+        </ul>
+    </nav>
 
-<textarea
-placeholder="Descripción">
-</textarea>
+</header>
 
-<input type="file">
 
-<button type="submit">
-Guardar
-</button>
+<!-- =========================================
+     HERO CONTACTO
+========================================= -->
+<section class="con-hero">
+    <div class="con-hero-overlay"></div>
+    <div class="con-hero-content">
+        <h1>Contáctenos</h1>
+        <p>Estamos listos para ayudarte a encontrar tu propiedad ideal</p>
+    </div>
+</section>
 
-</form>
 
-<div id="listadoPropiedades">
+<!-- =========================================
+     REDES SOCIALES
+========================================= -->
+<section class="con-redes">
 
+    <h2>Síguenos en Redes Sociales</h2>
+    <p class="con-redes-sub">Encuentra contenido exclusivo, propiedades nuevas y consejos inmobiliarios</p>
+
+    <div class="redes-grid">
+
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="red-card red-facebook">
+            <i class="fab fa-facebook-f"></i>
+            <div>
+                <span class="red-nombre">Facebook</span>
+                <span class="red-usuario">@HorizonteUrbano</span>
+                <span class="red-desc">Propiedades, noticias y consejos del sector inmobiliario</span>
+            </div>
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="red-card red-instagram">
+            <i class="fab fa-instagram"></i>
+            <div>
+                <span class="red-nombre">Instagram</span>
+                <span class="red-usuario">@horizonte.urbano</span>
+                <span class="red-desc">Fotos y videos de nuestras propiedades más destacadas</span>
+            </div>
+        </a>
+
+        <a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="red-card red-tiktok">
+            <i class="fab fa-tiktok"></i>
+            <div>
+                <span class="red-nombre">TikTok</span>
+                <span class="red-usuario">@horizonte.urbano</span>
+                <span class="red-desc">Tours virtuales, tips y tendencias del mercado inmobiliario</span>
+            </div>
+        </a>
+
+        <a href="https://wa.me/573186566817" target="_blank" rel="noopener" class="red-card red-whatsapp">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+                <span class="red-nombre">WhatsApp</span>
+                <span class="red-usuario">+57 318 656 6817</span>
+                <span class="red-desc">Escríbenos directamente y te respondemos al instante</span>
+            </div>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     DATOS DE CONTACTO + FORMULARIO
+========================================= -->
+<section class="con-main">
+
+    <!-- INFORMACIÓN DE CONTACTO -->
+    <div class="con-info">
+
+        <h2>Información de Contacto</h2>
+
+        <div class="info-item">
+            <div class="info-icono"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+                <strong>Dirección</strong>
+                <p>Calle 19 #14 - 17 Oficina 502 y 503<br>
+                   Edificio Suramericana<br>
+                   Armenia, Quindío</p>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <div class="info-icono"><i class="fas fa-phone-alt"></i></div>
+            <div>
+                <strong>Teléfonos</strong>
+                <p>
+                    <a href="tel:+573186566817">+57 318 656 6817</a><br>
+                    <a href="tel:+576063456789">(606) 345 6789</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <div class="info-icono"><i class="fas fa-envelope"></i></div>
+            <div>
+                <strong>Correos Electrónicos</strong>
+                <p>
+                    <a href="mailto:horizonteurbano@gmail.com">horizonteurbano@gmail.com</a><br>
+                    <a href="mailto:ventas@horizonteurbano.com">ventas@horizonteurbano.com</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <div class="info-icono"><i class="fas fa-clock"></i></div>
+            <div>
+                <strong>Horario de Atención</strong>
+                <p>
+                    Lunes a Viernes: 8:00 am – 6:00 pm<br>
+                    Sábados: 8:00 am – 1:00 pm<br>
+                    Domingos y festivos: Cerrado
+                </p>
+            </div>
+        </div>
+
+        <!-- BOTÓN DIRECTO WHATSAPP -->
+        <a href="https://wa.me/573186566817?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20sus%20propiedades."
+            target="_blank" rel="noopener" class="btn-whatsapp-grande">
+            <i class="fab fa-whatsapp"></i>
+            Chatear por WhatsApp ahora
+        </a>
+
+    </div>
+
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <div class="con-form">
+
+        <h2>Envíanos un Mensaje</h2>
+        <p class="form-sub">Completa el formulario y te contactaremos en menos de 24 horas</p>
+
+        <form id="formContacto" novalidate>
+
+            <div class="form-fila">
+                <div class="form-campo">
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+                </div>
+                <div class="form-campo">
+                    <label for="telefono">Teléfono / WhatsApp *</label>
+                    <input type="tel" id="telefono" placeholder="Ej: 300 123 4567" required>
+                </div>
+            </div>
+
+            <div class="form-campo">
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" placeholder="Ej: nombre@correo.com" required>
+            </div>
+
+            <div class="form-campo">
+                <label for="asunto">Asunto</label>
+                <select id="asunto">
+                    <option value="">Selecciona un tema</option>
+                    <option value="compra">Quiero comprar una propiedad</option>
+                    <option value="arriendo">Quiero arrendar una propiedad</option>
+                    <option value="vender">Quiero vender mi propiedad</option>
+                    <option value="admin">Administración de propiedad horizontal</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="form-campo">
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje" rows="5"
+                    placeholder="Cuéntanos qué tipo de propiedad buscas, tu presupuesto, ciudad o cualquier detalle que nos ayude a orientarte mejor..." required></textarea>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" id="politica" required>
+                <label for="politica">
+                    Acepto la <a href="#">política de tratamiento de datos personales</a>
+                </label>
+            </div>
+
+            <button type="submit" class="btn-enviar" id="btnEnviar">
+                <i class="fas fa-paper-plane"></i>
+                Enviar mensaje
+            </button>
+
+            <!-- Mensaje de confirmación -->
+            <div id="msgExito" class="msg-exito" style="display:none;">
+                <i class="fas fa-check-circle"></i>
+                ¡Mensaje enviado! Te contactaremos pronto.
+            </div>
+
+            <div id="msgError" class="msg-error" style="display:none;">
+                <i class="fas fa-exclamation-circle"></i>
+                Por favor completa todos los campos obligatorios.
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     MAPA
+========================================= -->
+<section class="mapa">
+
+    <h2>Encuéntranos aquí</h2>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.5!2d-75.6812!3d4.5339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38f5a3a3b3b3b3%3A0x0!2sArmenia%2C+Quind%C3%ADo!5e0!3m2!1ses!2sco!4v1680000000000"
+        width="100%"
+        height="420"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación Horizonte Urbano Inmobiliaria - Armenia Quindío">
+    </iframe>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+<footer>
+
+    <div class="quienes-somos">
+        <h3>Quiénes Somos</h3>
+        <p>
+            Somos una inmobiliaria con experiencia en
+            venta, alquiler y administración de propiedades
+            en Armenia, Quindío.
+        </p>
+    </div>
+
+    <div class="contacto">
+        <h3>Ubicación y Contacto</h3>
+        <p>
+            Calle 19 #14 - 17 Oficina 502 y 503,<br>
+            Edificio Suramericana, Armenia - Quindío
+        </p>
+        <p>Tel: <a href="tel:+573186566817">+57 318 656 6817</a></p>
+        <p>Email: <a href="mailto:horizonteurbano@gmail.com">horizonteurbano@gmail.com</a></p>
+    </div>
+
+    <div class="redes">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/573186566817" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     COPYRIGHT
+========================================= -->
+<div class="copyright">
+    © 2026 Horizonte Urbano Inmobiliaria | Todos los derechos reservados
 </div>
+
+
+<!-- =========================================
+     BOTÓN FLOTANTE WHATSAPP
+========================================= -->
+<a href="https://wa.me/573186566817"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<!-- =========================================
+     JAVASCRIPT — Validación del formulario
+========================================= -->
+<script>
+document.getElementById("formContacto").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nombre   = document.getElementById("nombre").value.trim();
+    const telefono = document.getElementById("telefono").value.trim();
+    const email    = document.getElementById("email").value.trim();
+    const mensaje  = document.getElementById("mensaje").value.trim();
+    const politica = document.getElementById("politica").checked;
+
+    const msgExito = document.getElementById("msgExito");
+    const msgError = document.getElementById("msgError");
+
+    msgExito.style.display = "none";
+    msgError.style.display = "none";
+
+    if (!nombre || !telefono || !email || !mensaje || !politica) {
+        msgError.style.display = "flex";
+        msgError.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+    }
+
+    // Simulación de envío exitoso
+    // Aquí puedes conectar tu backend o servicio como EmailJS, Formspree, etc.
+    const btn = document.getElementById("btnEnviar");
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+
+    setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar mensaje';
+        btn.disabled = false;
+        msgExito.style.display = "flex";
+        this.reset();
+        msgExito.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 1500);
+});
+</script>
 
 </body>
 </html>

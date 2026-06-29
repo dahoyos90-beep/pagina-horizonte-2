@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- =========================================
+     HEAD
+========================================= -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Horizonte Urbano Inmobiliaria</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/servicios.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+<header>
+    <div class="logo">
+        <img src="img/logo.jpg" alt="Horizonte Urbano Inmobiliaria">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="propiedades.html">Propiedades</a></li>
+            <li><a href="servicios.html" class="active">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contáctenos</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+<section class="srv-hero">
+    <div class="srv-hero-overlay"></div>
+    <div class="srv-hero-content">
+        <span class="srv-hero-tag">Lo que hacemos</span>
+        <h1>Nuestros Servicios</h1>
+        <p>Soluciones inmobiliarias integrales para propietarios,<br>
+           arrendatarios e inversionistas en el Eje Cafetero.</p>
+        <a href="contacto.html" class="srv-hero-btn">
+            <i class="fas fa-calendar-check"></i> Agendar asesoría gratis
+        </a>
+    </div>
+    <!-- Stats flotantes -->
+    <div class="srv-hero-stats">
+        <div class="stat-pill">
+            <span class="stat-n">+15</span>
+            <span class="stat-l">Años de experiencia</span>
+        </div>
+        <div class="stat-pill">
+            <span class="stat-n">+800</span>
+            <span class="stat-l">Clientes satisfechos</span>
+        </div>
+        <div class="stat-pill">
+            <span class="stat-n">100%</span>
+            <span class="stat-l">Respaldo legal</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================
+     INTRO — POR QUÉ ELEGIRNOS
+========================================= -->
+<section class="srv-intro">
+    <div class="srv-intro-texto">
+        <p class="srv-label">¿Por qué elegirnos?</p>
+        <h2>Tu propiedad en manos expertas</h2>
+        <p>En Horizonte Urbano reunimos más de 15 años de experiencia en el mercado
+           inmobiliario del Quindío y el Eje Cafetero. Nuestro equipo de profesionales
+           en derecho, finanzas y marketing trabaja de la mano para que cada transacción
+           sea segura, transparente y rentable.</p>
+        <ul class="srv-intro-checks">
+            <li><i class="fas fa-check-circle"></i> Asesoría personalizada sin costo inicial</li>
+            <li><i class="fas fa-check-circle"></i> Red de más de 1.200 inmuebles gestionados</li>
+            <li><i class="fas fa-check-circle"></i> Respaldo jurídico en cada proceso</li>
+            <li><i class="fas fa-check-circle"></i> Tecnología: recorridos virtuales 360°</li>
+        </ul>
+    </div>
+    <div class="srv-intro-img">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80"
+             alt="Equipo inmobiliario en reunión">
+        <div class="srv-intro-badge">
+            <i class="fas fa-award"></i>
+            <span>Inmobiliaria líder<br>del Quindío</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================
+     CATEGORÍAS — TABS DE NAVEGACIÓN
+========================================= -->
+<section class="srv-tabs-section">
+    <div class="srv-tabs" id="srvTabs">
+        <button class="srv-tab active" data-cat="propietarios">
+            <i class="fas fa-home"></i> Propietarios
+        </button>
+        <button class="srv-tab" data-cat="venta">
+            <i class="fas fa-tag"></i> Venta
+        </button>
+        <button class="srv-tab" data-cat="administracion">
+            <i class="fas fa-clipboard-list"></i> Administración
+        </button>
+        <button class="srv-tab" data-cat="mantenimiento">
+            <i class="fas fa-tools"></i> Mantenimiento
+        </button>
+        <button class="srv-tab" data-cat="legal">
+            <i class="fas fa-balance-scale"></i> Legal y Asesoría
+        </button>
+        <button class="srv-tab" data-cat="complementarios">
+            <i class="fas fa-star"></i> Complementarios
+        </button>
+    </div>
+</section>
+
+
+<!-- =========================================
+     CATEGORÍA 1 — PROPIETARIOS
+========================================= -->
+<section class="srv-cat active" id="cat-propietarios">
+
+    <div class="srv-cat-header">
+        <div class="srv-cat-icon"><i class="fas fa-home"></i></div>
+        <div>
+            <h2>Servicios para Propietarios</h2>
+            <p>Ponemos tu propiedad en el mercado de la forma más efectiva posible.</p>
+        </div>
+    </div>
+
+    <div class="srv-cat-img">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&q=80"
+             alt="Casa en venta">
+        <div class="srv-cat-img-tag">Venta y Alquiler</div>
+    </div>
+
+    <div class="srv-cards-grid">
+
+        <div class="srv-card" data-index="0">
+            <div class="srv-card-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Valoración Comercial</h3>
+            <p>Análisis comparativo de mercado para determinar el precio justo de venta o renta.
+               Usamos datos reales de transacciones recientes en la zona.</p>
+            <span class="srv-card-tag">Gratuito</span>
+        </div>
+
+        <div class="srv-card" data-index="1">
+            <div class="srv-card-icon"><i class="fas fa-camera"></i></div>
+            <h3>Marketing Inmobiliario</h3>
+            <p>Fotografía profesional, recorridos virtuales 360°, redacción de anuncios
+               persuasivos y publicación en los portales más visitados de Colombia.</p>
+            <span class="srv-card-tag">Incluido</span>
+        </div>
+
+        <div class="srv-card" data-index="2">
+            <div class="srv-card-icon"><i class="fas fa-user-check"></i></div>
+            <h3>Filtrado de Clientes</h3>
+            <p>Verificación de antecedentes, capacidad de pago y referencias de los
+               potenciales compradores o arrendatarios antes de cualquier negociación.</p>
+            <span class="srv-card-tag">Seguridad</span>
+        </div>
+
+        <div class="srv-card" data-index="3">
+            <div class="srv-card-icon"><i class="fas fa-calendar-alt"></i></div>
+            <h3>Gestión de Visitas</h3>
+            <p>Programación y acompañamiento profesional a los interesados durante
+               cada visita al inmueble, los 7 días de la semana.</p>
+            <span class="srv-card-tag">Personalizado</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CATEGORÍA 2 — VENTA
+========================================= -->
+<section class="srv-cat" id="cat-venta">
+
+    <div class="srv-cat-header">
+        <div class="srv-cat-icon"><i class="fas fa-tag"></i></div>
+        <div>
+            <h2>Servicios de Venta</h2>
+            <p>Te acompañamos en cada paso para vender tu inmueble al mejor precio y en el menor tiempo.</p>
+        </div>
+    </div>
+
+    <div class="srv-cat-img">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80"
+             alt="Venta de inmuebles">
+        <div class="srv-cat-img-tag">Venta Segura</div>
+    </div>
+
+    <div class="srv-cards-grid">
+
+        <div class="srv-card" data-index="0">
+            <div class="srv-card-icon"><i class="fas fa-chart-bar"></i></div>
+            <h3>Análisis de Mercado</h3>
+            <p>Estudio comparativo de inmuebles similares en la zona para fijar
+               el precio de venta ideal: competitivo y rentable para ti.</p>
+            <span class="srv-card-tag">Estrategia</span>
+        </div>
+
+        <div class="srv-card" data-index="1">
+            <div class="srv-card-icon"><i class="fas fa-bullhorn"></i></div>
+            <h3>Publicación Multicanal</h3>
+            <p>Tu inmueble visible en los principales portales inmobiliarios
+               de Colombia y en todas nuestras redes sociales activas.</p>
+            <span class="srv-card-tag">Difusión</span>
+        </div>
+
+        <div class="srv-card" data-index="2">
+            <div class="srv-card-icon"><i class="fas fa-handshake"></i></div>
+            <h3>Negociación Profesional</h3>
+            <p>Nuestros asesores negocian en tu nombre para obtener las
+               mejores condiciones económicas y jurídicas en el cierre.</p>
+            <span class="srv-card-tag">Representación</span>
+        </div>
+
+        <div class="srv-card" data-index="3">
+            <div class="srv-card-icon"><i class="fas fa-file-alt"></i></div>
+            <h3>Gestión Documental</h3>
+            <p>Preparación de promesa de compraventa, paz y salvos, certificados
+               de tradición y todos los documentos necesarios para el cierre.</p>
+            <span class="srv-card-tag">Documentos</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="srv-cat" id="cat-administracion">
+
+    <div class="srv-cat-header">
+        <div class="srv-cat-icon"><i class="fas fa-clipboard-list"></i></div>
+        <div>
+            <h2>Administración de Arrendamientos</h2>
+            <p>Para dueños que prefieren no lidiar con la gestión diaria del alquiler.</p>
+        </div>
+    </div>
+
+    <div class="srv-cat-img">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80"
+             alt="Gestión de arriendos">
+        <div class="srv-cat-img-tag">Gestión Integral</div>
+    </div>
+
+    <div class="srv-cards-grid">
+
+        <div class="srv-card" data-index="0">
+            <div class="srv-card-icon"><i class="fas fa-dollar-sign"></i></div>
+            <h3>Cobro de Cánones</h3>
+            <p>Recaudo mensual de los pagos y gestión de cartera ante retrasos,
+               con reportes detallados al propietario.</p>
+            <span class="srv-card-tag">Mensual</span>
+        </div>
+
+        <div class="srv-card" data-index="1">
+            <div class="srv-card-icon"><i class="fas fa-tools"></i></div>
+            <h3>Mantenimiento</h3>
+            <p>Coordinación con técnicos y profesionales para reparaciones locativas
+               preventivas y correctivas. Tu inmueble siempre en óptimas condiciones.</p>
+            <span class="srv-card-tag">Preventivo</span>
+        </div>
+
+        <div class="srv-card" data-index="2">
+            <div class="srv-card-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+            <h3>Liquidación de Servicios</h3>
+            <p>Pago de servicios públicos, impuesto predial y administración de
+               propiedad horizontal, sin que tengas que preocuparte por nada.</p>
+            <span class="srv-card-tag">Sin estrés</span>
+        </div>
+
+        <div class="srv-card" data-index="3">
+            <div class="srv-card-icon"><i class="fas fa-file-signature"></i></div>
+            <h3>Renovación de Contratos</h3>
+            <p>Gestión legal de incrementos anuales y prórrogas de contratos conforme
+               a la Ley 820 de 2003 y sus actualizaciones.</p>
+            <span class="srv-card-tag">Legal</span>
+        </div>
+
+        <div class="srv-card" data-index="4">
+            <div class="srv-card-icon"><i class="fas fa-paint-brush"></i></div>
+            <h3>Preparación Estética</h3>
+            <p>Coordinamos la presentación óptima del inmueble: limpieza profunda,
+               arreglos locativos y ambientación para que luzca más atractivo
+               y se arriende o venda más rápido.</p>
+            <span class="srv-card-tag">Presentación</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CATEGORÍA — MANTENIMIENTO LOCATIVO
+========================================= -->
+<section class="srv-cat" id="cat-mantenimiento">
+
+    <div class="srv-cat-header">
+        <div class="srv-cat-icon"><i class="fas fa-tools"></i></div>
+        <div>
+            <h2>Mantenimiento Locativo</h2>
+            <p>Coordinación profesional de técnicos para mantener tu inmueble en perfectas condiciones.</p>
+        </div>
+    </div>
+
+    <div class="srv-cat-img">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80"
+             alt="Mantenimiento de inmuebles">
+        <div class="srv-cat-img-tag">Preventivo y Correctivo</div>
+    </div>
+
+    <div class="srv-cards-grid">
+
+        <div class="srv-card" data-index="0">
+            <div class="srv-card-icon"><i class="fas fa-search-plus"></i></div>
+            <h3>Inspección Preventiva</h3>
+            <p>Visitas periódicas para detectar problemas antes de que se conviertan
+               en daños costosos: filtraciones, grietas, instalaciones eléctricas y más.</p>
+            <span class="srv-card-tag">Preventivo</span>
+        </div>
+
+        <div class="srv-card" data-index="1">
+            <div class="srv-card-icon"><i class="fas fa-wrench"></i></div>
+            <h3>Reparaciones Correctivas</h3>
+            <p>Coordinación ágil con fontaneros, electricistas, pintores y técnicos
+               especializados para resolver daños de forma rápida y a precios justos.</p>
+            <span class="srv-card-tag">Correctivo</span>
+        </div>
+
+        <div class="srv-card" data-index="2">
+            <div class="srv-card-icon"><i class="fas fa-paint-roller"></i></div>
+            <h3>Acabados y Pintura</h3>
+            <p>Restauración de pintura interior y exterior, estuco, enchapes y
+               acabados para que el inmueble luzca como nuevo antes de entregarlo.</p>
+            <span class="srv-card-tag">Estética</span>
+        </div>
+
+        <div class="srv-card" data-index="3">
+            <div class="srv-card-icon"><i class="fas fa-clipboard-check"></i></div>
+            <h3>Informe de Estado</h3>
+            <p>Reporte fotográfico y escrito del estado del inmueble antes y después
+               de cada intervención, entregado directamente al propietario.</p>
+            <span class="srv-card-tag">Transparencia</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CATEGORÍA 3 — LEGAL
+========================================= -->
+<section class="srv-cat" id="cat-legal">
+
+    <div class="srv-cat-header">
+        <div class="srv-cat-icon"><i class="fas fa-balance-scale"></i></div>
+        <div>
+            <h2>Servicios Legales y de Asesoría</h2>
+            <p>Respaldo jurídico en cada etapa de tu proceso inmobiliario.</p>
+        </div>
+    </div>
+
+    <div class="srv-cat-img">
+        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80"
+             alt="Asesoría legal inmobiliaria">
+        <div class="srv-cat-img-tag">Respaldo Jurídico</div>
+    </div>
+
+    <div class="srv-cards-grid">
+
+        <div class="srv-card" data-index="0">
+            <div class="srv-card-icon"><i class="fas fa-file-contract"></i></div>
+            <h3>Redacción de Contratos</h3>
+            <p>Elaboración de promesas de compraventa, contratos de arrendamiento
+               y mandatos, garantizando cumplimiento legal vigente.</p>
+            <span class="srv-card-tag">Documentos</span>
+        </div>
+
+        <div class="srv-card" data-index="1">
+            <div class="srv-card-icon"><i class="fas fa-search"></i></div>
+            <h3>Estudio de Títulos</h3>
+            <p>Verificación del historial jurídico del inmueble: embargos, hipotecas
+               y gravámenes que puedan afectar la transacción.</p>
+            <span class="srv-card-tag">Seguridad</span>
+        </div>
+
+        <div class="srv-card" data-index="2">
+            <div class="srv-card-icon"><i class="fas fa-stamp"></i></div>
+            <h3>Trámites Notariales</h3>
+            <p>Gestión completa de escrituración, pago de impuestos de beneficencia
+               y registro en la Oficina de Instrumentos Públicos.</p>
+            <span class="srv-card-tag">Notaría</span>
+        </div>
+
+        <div class="srv-card" data-index="3">
+            <div class="srv-card-icon"><i class="fas fa-calculator"></i></div>
+            <h3>Asesoría Tributaria</h3>
+            <p>Orientación sobre ganancia ocasional, retención en la fuente y demás
+               impuestos derivados de la venta de bienes inmuebles en Colombia.</p>
+            <span class="srv-card-tag">Impuestos</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CATEGORÍA 4 — COMPLEMENTARIOS
+========================================= -->
+<section class="srv-cat" id="cat-complementarios">
+
+    <div class="srv-cat-header">
+        <div class="srv-cat-icon"><i class="fas fa-star"></i></div>
+        <div>
+            <h2>Servicios Complementarios</h2>
+            <p>Soluciones adicionales para maximizar el valor de tu propiedad.</p>
+        </div>
+    </div>
+
+    <div class="srv-cat-img">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80"
+             alt="Home staging y remodelación">
+        <div class="srv-cat-img-tag">Valor Agregado</div>
+    </div>
+
+    <div class="srv-cards-grid">
+
+        <div class="srv-card" data-index="0">
+            <div class="srv-card-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Seguros Inmobiliarios</h3>
+            <p>Gestión de pólizas que protegen al propietario contra impago de
+               cánones, daños al inmueble y responsabilidad civil.</p>
+            <span class="srv-card-tag">Protección</span>
+        </div>
+
+        <div class="srv-card" data-index="1">
+            <div class="srv-card-icon"><i class="fas fa-tools"></i></div>
+            <h3>Mantenimiento Locativo</h3>
+            <p>Coordinación con técnicos y profesionales especializados para
+               reparaciones preventivas y correctivas que preservan el valor
+               del inmueble a largo plazo.</p>
+            <span class="srv-card-tag">Conservación</span>
+        </div>
+
+        <div class="srv-card" data-index="2">
+            <div class="srv-card-icon"><i class="fas fa-clipboard-check"></i></div>
+            <h3>Inspecciones Técnicas</h3>
+            <p>Visitas periódicas al inmueble para verificar su estado físico,
+               detectar problemas a tiempo y generar informes detallados al propietario.</p>
+            <span class="srv-card-tag">Control</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     PROCESO — CÓMO TRABAJAMOS
+========================================= -->
+<section class="srv-proceso">
+
+    <p class="srv-label">Metodología</p>
+    <h2>¿Cómo trabajamos?</h2>
+    <p class="srv-proceso-sub">Un proceso claro, transparente y sin sorpresas en cada etapa</p>
+
+    <div class="srv-pasos">
+
+        <div class="srv-paso">
+            <div class="paso-num">01</div>
+            <div class="paso-icono"><i class="fas fa-phone-alt"></i></div>
+            <h4>Consulta inicial</h4>
+            <p>Nos contactas y agendamos una reunión sin costo para conocer tu necesidad.</p>
+        </div>
+
+        <div class="srv-paso-linea"></div>
+
+        <div class="srv-paso">
+            <div class="paso-num">02</div>
+            <div class="paso-icono"><i class="fas fa-search-dollar"></i></div>
+            <h4>Análisis y valoración</h4>
+            <p>Estudiamos tu propiedad o necesidad y presentamos una propuesta personalizada.</p>
+        </div>
+
+        <div class="srv-paso-linea"></div>
+
+        <div class="srv-paso">
+            <div class="paso-num">03</div>
+            <div class="paso-icono"><i class="fas fa-rocket"></i></div>
+            <h4>Ejecución</h4>
+            <p>Activamos el plan: publicación, visitas, gestión legal y negociación.</p>
+        </div>
+
+        <div class="srv-paso-linea"></div>
+
+        <div class="srv-paso">
+            <div class="paso-num">04</div>
+            <div class="paso-icono"><i class="fas fa-handshake"></i></div>
+            <h4>Cierre y seguimiento</h4>
+            <p>Formalizamos el negocio y te acompañamos en el pos-venta o pos-arriendo.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CTA — LLAMADO A LA ACCIÓN
+========================================= -->
+<section class="srv-cta">
+    <div class="srv-cta-content">
+        <h2>¿Listo para empezar?</h2>
+        <p>Habla con uno de nuestros asesores hoy mismo. La primera consulta es completamente gratuita.</p>
+        <div class="srv-cta-btns">
+            <a href="contacto.html" class="srv-cta-btn-main">
+                <i class="fas fa-envelope"></i> Enviar mensaje
+            </a>
+            <a href="https://wa.me/573186566817?text=Hola%2C%20quiero%20información%20sobre%20sus%20servicios."
+               target="_blank" rel="noopener" class="srv-cta-btn-wa">
+                <i class="fab fa-whatsapp"></i> WhatsApp directo
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+<footer>
+    <div class="quienes-somos">
+        <h3>Quiénes Somos</h3>
+        <p>Somos una inmobiliaria con experiencia en venta, alquiler y administración
+           de propiedades en Armenia, Quindío.</p>
+    </div>
+    <div class="contacto">
+        <h3>Ubicación y Contacto</h3>
+        <p>Calle 19 #14 - 17 Oficina 502 y 503,<br>
+           Edificio Suramericana, Armenia - Quindío</p>
+        <p>Tel: <a href="tel:+573186566817">+57 318 656 6817</a></p>
+        <p>Email: <a href="mailto:horizonteurbano@gmail.com">horizonteurbano@gmail.com</a></p>
+    </div>
+    <div class="redes">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/573186566817" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+</footer>
+
+<div class="copyright">
+    © 2026 Horizonte Urbano Inmobiliaria | Todos los derechos reservados
+</div>
+
+<a href="https://wa.me/573186566817" class="whatsapp" target="_blank"
+   rel="noopener" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- JS -->
+<script src="servicios.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,700 @@
+/* =========================================================
+   PROPIEDADES.CSS — Estilos exclusivos de propiedades.html
+========================================================= */
+
+
+/* =========================================================
+   HERO / BANNER
+========================================================= */
+
+.prop-hero {
+    position: relative;
+    height: 320px;
+    background: url('../img/3.webp') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.prop-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.prop-hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.prop-hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    margin-bottom: 10px;
+}
+
+.prop-hero-content p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   FILTROS
+========================================================= */
+
+.prop-filtros {
+    background: #f5f9f5;
+    padding: 30px 50px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.filtros-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.filtro-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.filtro-campo label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #2E7D32;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filtro-campo input,
+.filtro-campo select {
+    padding: 10px 12px;
+    border: 1.5px solid #d1d1d1;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    background: white;
+    outline: none;
+    transition: border-color 0.2s;
+    color: #333;
+}
+
+.filtro-campo input:focus,
+.filtro-campo select:focus {
+    border-color: #2E7D32;
+}
+
+.filtro-btn {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.btn-filtrar {
+    flex: 1;
+    background: #2E7D32;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-filtrar:hover {
+    background: #1b5e20;
+    transform: scale(1.02);
+}
+
+.btn-limpiar {
+    background: white;
+    color: #2E7D32;
+    border: 1.5px solid #2E7D32;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-limpiar:hover {
+    background: #2E7D32;
+    color: white;
+}
+
+
+/* =========================================================
+   TABS + CONTADOR
+========================================================= */
+
+.prop-tabs-section {
+    max-width: 1300px;
+    margin: 30px auto 0;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.prop-tabs {
+    display: flex;
+    gap: 8px;
+}
+
+.tab {
+    background: white;
+    border: 1.5px solid #d1d1d1;
+    color: #555;
+    padding: 9px 22px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transition: all 0.25s;
+}
+
+.tab:hover {
+    border-color: #2E7D32;
+    color: #2E7D32;
+}
+
+.tab.active {
+    background: #2E7D32;
+    border-color: #2E7D32;
+    color: white;
+}
+
+.prop-contador {
+    font-size: 0.9rem;
+    color: #777;
+    font-weight: 500;
+}
+
+.prop-contador span {
+    color: #2E7D32;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   GRID DE PROPIEDADES
+========================================================= */
+
+.prop-contenedor {
+    max-width: 1300px;
+    margin: 25px auto 60px;
+    padding: 0 50px;
+}
+
+.prop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 28px;
+}
+
+/* Sin resultados */
+.sin-prop {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+}
+
+.sin-prop i {
+    font-size: 3rem;
+    color: #ccc;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.sin-prop p {
+    font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   TARJETA DE PROPIEDAD
+========================================================= */
+
+.prop-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.prop-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Badge venta / arriendo */
+.prop-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+.badge-venta    { background: #2E7D32; color: white; }
+.badge-arriendo { background: #1565C0; color: white; }
+
+.prop-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.prop-card:hover img {
+    transform: scale(1.04);
+}
+
+.prop-card-body {
+    padding: 18px 20px 20px;
+}
+
+.prop-precio {
+    color: #2E7D32;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.prop-titulo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.prop-ubicacion {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.prop-detalles {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 14px;
+}
+
+.prop-detalle-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.83rem;
+    color: #555;
+}
+
+.prop-detalle-item i {
+    color: #2E7D32;
+    font-size: 0.95rem;
+}
+
+.btn-ver-detalle {
+    width: 100%;
+    background: #2E7D32;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-ver-detalle:hover {
+    background: #1b5e20;
+}
+
+
+/* =========================================================
+   MODAL DE DETALLE
+========================================================= */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-overlay.abierto {
+    display: flex;
+}
+
+.modal-box {
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 10;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.modal-cerrar:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+
+/* Galería */
+.modal-galeria {
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+.modal-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.modal-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 3;
+}
+
+.gal-prev,
+.gal-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.45);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 4;
+}
+
+.gal-prev { left: 14px; }
+.gal-next { right: 14px; }
+
+.gal-prev:hover,
+.gal-next:hover {
+    background: rgba(0,0,0,0.75);
+}
+
+.gal-puntos {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 7px;
+    z-index: 4;
+}
+
+.gal-punto {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.gal-punto.activo {
+    background: white;
+}
+
+
+/* Info del modal */
+.modal-info {
+    padding: 28px 32px 32px;
+}
+
+.modal-header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.modal-header-info h2 {
+    font-size: 1.6rem;
+    color: #1b1b1b;
+    margin-bottom: 6px;
+}
+
+.modal-ubicacion {
+    color: #888;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.modal-ubicacion i {
+    color: #2E7D32;
+}
+
+.modal-precio {
+    color: #2E7D32;
+    font-size: 1.7rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* Chips de características rápidas */
+.modal-chips {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.chip {
+    background: #f0f7f0;
+    color: #2E7D32;
+    border: 1px solid #c8e6c9;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.modal-descripcion {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 18px;
+}
+
+/* Tabla de características */
+.modal-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.caract-item {
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.caract-label {
+    font-size: 0.75rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.caract-valor {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #222;
+}
+
+/* Botones del modal */
+.modal-acciones {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn-modal-wa {
+    flex: 1;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 14px rgba(37,211,102,0.3);
+}
+
+.btn-modal-wa:hover {
+    background: #1ebe5d;
+    transform: scale(1.02);
+}
+
+.btn-modal-wa i { font-size: 1.2rem; }
+
+.btn-modal-contacto {
+    flex: 1;
+    background: white;
+    color: #2E7D32;
+    border: 2px solid #2E7D32;
+    text-decoration: none;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-modal-contacto:hover {
+    background: #2E7D32;
+    color: white;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+    .filtros-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filtro-btn {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .prop-hero-content h1 { font-size: 2rem; }
+
+    .prop-filtros { padding: 25px 20px; }
+
+    .filtros-grid { grid-template-columns: 1fr 1fr; }
+
+    .prop-tabs-section { padding: 0 20px; }
+
+    .prop-contenedor { padding: 0 20px; }
+
+    .modal-box { grid-template-rows: auto; }
+
+    .modal-galeria { height: 260px; }
+
+    .modal-info { padding: 20px; }
+
+    .modal-caracteristicas { grid-template-columns: repeat(2, 1fr); }
+
+    .modal-header-info { flex-direction: column; gap: 8px; }
+}
+
+@media (max-width: 600px) {
+
+    .prop-hero { height: 240px; }
+
+    .prop-hero-content h1 { font-size: 1.7rem; }
+
+    .filtros-grid { grid-template-columns: 1fr; }
+
+    .filtro-btn { flex-direction: column; }
+
+    .prop-tabs { gap: 6px; }
+
+    .tab { padding: 8px 14px; font-size: 0.82rem; }
+
+    .modal-caracteristicas { grid-template-columns: 1fr 1fr; }
+
+    .modal-acciones { flex-direction: column; }
+}

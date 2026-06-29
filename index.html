@@ -1,25 +1,17 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <!-- =========================================
      HEAD
 ========================================= -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horizonte Urbano Inmobiliaria</title>
 
-```
-<!-- CSS Principal -->
-<link rel="stylesheet" href="css/styles.css">
-
-<!-- Font Awesome -->
-<link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -30,44 +22,37 @@
 ========================================= -->
 <header>
 
-    <!-- Logo -->
     <div class="logo">
         <img src="img/logo.jpg" alt="Horizonte Urbano Inmobiliaria">
     </div>
 
-    <!-- Menú de Navegación -->
     <nav>
         <ul>
             <li><a href="index.html" class="active">Inicio</a></li>
             <li><a href="propiedades.html">Propiedades</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Asesor</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="contacto.html">Contáctenos</a></li>
         </ul>
     </nav>
 
 </header>
 
-<!-- =========================================
-     HERO SECTION
-========================================= -->
-/* =====================================================
-   HERO PRINCIPAL (CON CARRUSEL DE FONDO)
-===================================================== */
 
+<!-- =========================================
+     HERO (CARRUSEL DE FONDO)
+========================================= -->
 <section class="hero-container">
 
-    <!-- CARRUSEL DE FONDO -->
+    <!-- Imágenes del carrusel -->
     <div class="hero-slides">
-
-        <img src="img/1.jpg" class="active" alt="Casa 1">
-        <img src="img/2.jpg" alt="Casa 2">
-        <img src="img/3.webp" alt="Casa 3">
-        <img src="img/images4.jpg" alt="Apartamento 1">
-
+        <img src="img/1.jpg"       class="active" alt="Casa 1">
+        <img src="img/2.jpg"                       alt="Casa 2">
+        <img src="img/3.webp"                      alt="Casa 3">
+        <img src="img/images4.jpg"                 alt="Apartamento">
     </div>
 
-    <!-- CONTENIDO DEL HERO -->
+    <!-- Contenido sobre el carrusel -->
     <div class="hero">
 
         <!-- BUSCADOR -->
@@ -75,129 +60,145 @@
 
             <h3>BÚSQUEDA AVANZADA</h3>
 
-            <form class="grid-form">
+            <div class="grid-form">
 
                 <div class="campo">
-                    <label>Ciudad:</label>
-                    <input type="text">
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad" placeholder="Ej: Armenia">
                 </div>
 
                 <div class="campo">
-                    <label>Departamento:</label>
-                    <input type="text">
+                    <label for="departamento">Departamento:</label>
+                    <input type="text" id="departamento" placeholder="Ej: Quindío">
                 </div>
 
                 <div class="campo">
-                    <label>Barrio:</label>
-                    <input type="text">
+                    <label for="barrio">Barrio:</label>
+                    <input type="text" id="barrio" placeholder="Ej: El Bosque">
                 </div>
 
                 <div class="campo">
-                    <label>Tipo:</label>
-                    <select>
-                        <option>Casa</option>
-                        <option>Apartamento</option>
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo">
+                        <option value="">Tipo de inmueble</option>
+                        <option value="Casa">Casa</option>
+                        <option value="Apartamento">Apartamento</option>
+                        <option value="Local">Local</option>
+                        <option value="Finca">Finca</option>
+                        <option value="Lote">Lote</option>
                     </select>
                 </div>
 
                 <div class="campo">
-                    <label>Habitaciones:</label>
-                    <input type="number">
+                    <label for="precioDesde">Desde ($):</label>
+                    <input type="number" id="precioDesde" min="0" placeholder="Ej: 100000000">
                 </div>
 
                 <div class="campo">
-                    <label>Desde:</label>
-                    <input type="number">
+                    <label for="precioHasta">Hasta ($):</label>
+                    <input type="number" id="precioHasta" min="0" placeholder="Ej: 500000000">
                 </div>
 
                 <div class="campo">
-                    <label>Hasta:</label>
-                    <input type="number">
+                    <label for="habitaciones">Habitaciones:</label>
+                    <input type="number" id="habitaciones" min="0" placeholder="Ej: 3">
                 </div>
 
                 <div class="campo">
-                    <label>Negocio:</label>
-                    <select>
-                        <option>Venta</option>
-                        <option>Arriendo</option>
+                    <label for="operacion">Negocio:</label>
+                    <select id="operacion">
+                        <option value="">Operación</option>
+                        <option value="Venta">Venta</option>
+                        <option value="Arriendo">Arriendo</option>
                     </select>
                 </div>
 
-                <button type="submit" class="btn-buscar">
-                    BUSCAR
+                <button type="button" id="btnBuscar" class="btn-buscar">
+                    <i class="fas fa-search"></i> BUSCAR
                 </button>
 
-            </form>
+            </div>
 
         </div>
 
         <!-- TEXTO PRINCIPAL -->
         <div class="hero-text">
-
             <h1>Horizonte Urbano Inmobiliaria</h1>
-
-            <p>
-                Especialistas en Arrendamientos, Venta de Inmuebles y Administración de Propiedad Horizontal.
-            </p>
-
-            <a href="#propiedades" class="btn">
-                Ver Propiedades
-            </a>
-
-        </div>
-
-    </div>
-
-        <!-- ==============================
-             TEXTO PRINCIPAL
-        =============================== -->
-        <div class="hero-text">
-
-            <h1>Horizonte Urbano Inmobiliaria</h1>
-
-            <p>
-                Especialistas en Arrendamientos,
-                Venta de Inmuebles y Administración
-                de Propiedad Horizontal.
-            </p>
-
-            <a href="#propiedades" class="btn">
-                Ver Propiedades
-            </a>
-
+            <p>Especialistas en Arrendamientos, Venta de Inmuebles
+               y Administración de Propiedad Horizontal.</p>
+            <a href="#propiedades" class="btn">Ver Propiedades</a>
         </div>
 
     </div>
 
 </section>
 
-<!-- =========================================
-     SERVICIOS
-========================================= -->
-<section class="servicios">
 
-    <h2>Nuestros Servicios</h2>
+<!-- =========================================
+     LO QUE OFRECEMOS
+     (vinculado a servicios.html)
+========================================= -->
+<section class="servicios" id="lo-que-ofrecemos">
+
+    <h2>Lo que Ofrecemos</h2>
 
     <div class="cards">
 
-        <div class="card">
-            <h3>🏠 Arrendamientos</h3>
-            <p>Gestionamos el alquiler de inmuebles.</p>
-        </div>
+        <a href="servicios.html#cat-propietarios" class="card card-link">
+            <div class="card-icono"><i class="fas fa-house-user"></i></div>
+            <h3>Propietarios</h3>
+            <p>Administramos su inmueble con total seguridad, gestionando
+               arrendamientos, pagos y atención personalizada para maximizar
+               la rentabilidad.</p>
+            <span class="card-tag">Ver servicio →</span>
+        </a>
 
-        <div class="card">
-            <h3>🏡 Venta de Inmuebles</h3>
-            <p>Compra y venta segura de propiedades.</p>
-        </div>
+        <a href="servicios.html#cat-venta" class="card card-link">
+            <div class="card-icono"><i class="fas fa-tag"></i></div>
+            <h3>Venta de Inmuebles</h3>
+            <p>Comercializamos su propiedad mediante estrategias de marketing,
+               asesoría profesional y acompañamiento durante todo el proceso
+               de venta.</p>
+            <span class="card-tag">Ver servicio →</span>
+        </a>
 
-        <div class="card">
-            <h3>🏢 Propiedad Horizontal</h3>
-            <p>Administración integral de conjuntos y edificios.</p>
-        </div>
+        <a href="servicios.html#cat-administracion" class="card card-link">
+            <div class="card-icono"><i class="fas fa-building"></i></div>
+            <h3>Administración</h3>
+            <p>Gestionamos propiedades horizontales e inmuebles garantizando
+               organización, control financiero y excelente atención.</p>
+            <span class="card-tag">Ver servicio →</span>
+        </a>
+
+        <a href="servicios.html#cat-mantenimiento" class="card card-link">
+            <div class="card-icono"><i class="fas fa-screwdriver-wrench"></i></div>
+            <h3>Mantenimiento</h3>
+            <p>Coordinamos mantenimientos preventivos y correctivos para
+               conservar el inmueble en óptimas condiciones y preservar
+               su valor.</p>
+            <span class="card-tag">Ver servicio →</span>
+        </a>
+
+        <a href="servicios.html#cat-legal" class="card card-link">
+            <div class="card-icono"><i class="fas fa-scale-balanced"></i></div>
+            <h3>Legal y Asesoría</h3>
+            <p>Brindamos acompañamiento jurídico e inmobiliario para contratos,
+               trámites y procesos relacionados con bienes raíces.</p>
+            <span class="card-tag">Ver servicio →</span>
+        </a>
+
+        <a href="servicios.html#cat-complementarios" class="card card-link">
+            <div class="card-icono"><i class="fas fa-handshake"></i></div>
+            <h3>Complementarios</h3>
+            <p>Ofrecemos soluciones adicionales para propietarios, arrendatarios
+               e inversionistas con aliados estratégicos de confianza.</p>
+            <span class="card-tag">Ver servicio →</span>
+        </a>
 
     </div>
 
 </section>
+
 
 <!-- =========================================
      PROPIEDADES DESTACADAS
@@ -206,38 +207,11 @@
 
     <h2>Propiedades Destacadas</h2>
 
-    <div class="grid">
-
-        <div class="property">
-            <img src="https://picsum.photos/400/250"
-                alt="Casa campestre en Armenia">
-
-            <h3>Casa Campestre</h3>
-            <p>$450.000.000</p>
-            <button>Ver Detalles</button>
-        </div>
-
-        <div class="property">
-            <img src="https://picsum.photos/401/250"
-                alt="Apartamento en Armenia">
-
-            <h3>Apartamento Centro</h3>
-            <p>$280.000.000</p>
-            <button>Ver Detalles</button>
-        </div>
-
-        <div class="property">
-            <img src="https://picsum.photos/402/250"
-                alt="Local Comercial">
-
-            <h3>Local Comercial</h3>
-            <p>$520.000.000</p>
-            <button>Ver Detalles</button>
-        </div>
-
-    </div>
+    <!-- El JS inserta las tarjetas aquí -->
+    <div id="contenedorPropiedades" class="grid"></div>
 
 </section>
+
 
 <!-- =========================================
      GOOGLE MAP
@@ -246,83 +220,51 @@
 
     <h2>Ubicación</h2>
 
-   <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.789..." 
-        width="100%" 
-        height="450" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.5!2d-75.6812!3d4.5339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38f5a3a3b3b3b3%3A0x0!2sArmenia%2C+Quind%C3%ADo!5e0!3m2!1ses!2sco!4v1680000000000"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación Horizonte Urbano Inmobiliaria">
     </iframe>
+
 </section>
+
 
 <!-- =========================================
      FOOTER
 ========================================= -->
 <footer>
 
-    <!-- Quiénes Somos -->
     <div class="quienes-somos">
-
         <h3>Quiénes Somos</h3>
-
-        <p>
-            Somos una inmobiliaria con experiencia en
-            venta, alquiler y administración de propiedades
-            en Armenia, Quindío.
-        </p>
-
+        <p>Somos una inmobiliaria con experiencia en venta, alquiler y
+           administración de propiedades en Armenia, Quindío.</p>
     </div>
 
-    <!-- Información de Contacto -->
     <div class="contacto">
-
         <h3>Ubicación y Contacto</h3>
-
-        <p>
-            Calle 19 #14 - 17 Oficina 502 y 503,
-            Edificio Suramericana,
-            Armenia - Quindío
-        </p>
-
-        <p>
-            Tel:
-            <a href="tel:+573186566817">
-                +57 318 656 6817
-            </a>
-        </p>
-
-        <p>
-            Email:
-            <a href="mailto:horizonteurbano@gmail.com">
-                horizonteurbano@gmail.com
-            </a>
-        </p>
-
+        <p>Calle 19 #14 - 17 Oficina 502 y 503,<br>
+           Edificio Suramericana, Armenia - Quindío</p>
+        <p>Tel: <a href="tel:+573186566817">+57 318 656 6817</a></p>
+        <p>Email: <a href="mailto:horizonteurbano@gmail.com">horizonteurbano@gmail.com</a></p>
     </div>
 
-    <!-- Redes Sociales -->
     <div class="redes">
-
-        <a href="#">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-
-        <a href="#">
-            <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="#">
-            <i class="fab fa-tiktok"></i>
-        </a>
-
-        <a href="https://wa.me/573186566817">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/573186566817" aria-label="WhatsApp"
+           target="_blank" rel="noopener">
             <i class="fab fa-whatsapp"></i>
         </a>
-
     </div>
 
 </footer>
+
 
 <!-- =========================================
      COPYRIGHT
@@ -331,16 +273,71 @@
     © 2026 Horizonte Urbano Inmobiliaria | Todos los derechos reservados
 </div>
 
+
 <!-- =========================================
      BOTÓN FLOTANTE WHATSAPP
 ========================================= -->
 <a href="https://wa.me/573186566817"
     class="whatsapp"
-    target="_blank">
-
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp">
     <i class="fab fa-whatsapp"></i>
-
 </a>
+
+
+<!-- =========================================
+     MODAL DE DETALLE (mismo que propiedades.html)
+========================================= -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" id="modalBox">
+
+        <button class="modal-cerrar" id="modalCerrar">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <div class="modal-galeria">
+            <img id="modalFotoActiva" src="" alt="">
+            <button class="gal-prev" id="galPrev"><i class="fas fa-chevron-left"></i></button>
+            <button class="gal-next" id="galNext"><i class="fas fa-chevron-right"></i></button>
+            <div class="gal-puntos" id="galPuntos"></div>
+            <span class="modal-badge" id="modalBadge"></span>
+        </div>
+
+        <div class="modal-info">
+
+            <div class="modal-header-info">
+                <div>
+                    <h2 id="modalTitulo"></h2>
+                    <p class="modal-ubicacion">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="modalUbicacion"></span>
+                    </p>
+                </div>
+                <div class="modal-precio" id="modalPrecio"></div>
+            </div>
+
+            <div class="modal-chips" id="modalChips"></div>
+
+            <p class="modal-descripcion" id="modalDescripcion"></p>
+
+            <div class="modal-caracteristicas" id="modalCaracteristicas"></div>
+
+            <div class="modal-acciones">
+                <a id="modalWhatsapp" href="#" target="_blank" rel="noopener"
+                   class="btn-modal-wa">
+                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                </a>
+                <a href="contacto.html" class="btn-modal-contacto">
+                    <i class="fas fa-envelope"></i> Enviar mensaje
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
 
 <!-- =========================================
      JAVASCRIPT

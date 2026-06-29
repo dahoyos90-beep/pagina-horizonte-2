@@ -1,6 +1,6 @@
 /* =========================================================
    HORIZONTE URBANO INMOBILIARIA - CSS PRINCIPAL
-   Versión organizada y documentada
+   Versión corregida — márgenes y bordes unificados
 ========================================================= */
 
 
@@ -8,29 +8,68 @@
    RESET Y GLOBAL
 ========================================================= */
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    padding-top: 90px;
+    background: #ffffff;
+}
+
 
 /* =========================================================
-   HEADER PROFESIONAL
+   UTILIDAD — CONTENEDOR CENTRADO
+   Úsalo para limitar el ancho interno de las secciones
+========================================================= */
+
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+
+/* =========================================================
+   HEADER FIJO
 ========================================================= */
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+
+    padding: 15px 50px;
+
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
 
 .logo img {
     height: 80px;
+    display: block;
 }
 
 nav ul {
@@ -43,36 +82,97 @@ nav a {
     text-decoration: none;
     color: #2E7D32;
     font-weight: bold;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+nav a:hover,
+nav a.active {
+    color: #1b5e20;
 }
 
 
 /* =========================================================
-   HERO: LAYOUT PRINCIPAL
+   HERO CONTAINER
+========================================================= */
+
+.hero-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CARRUSEL DE FONDO
+========================================================= */
+
+.hero-slides {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-slides img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    will-change: opacity;
+}
+
+.hero-slides img.active {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   OVERLAY OSCURO
+========================================================= */
+
+.hero-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.38);
+    z-index: 2;
+}
+
+
+/* =========================================================
+   CONTENIDO HERO
 ========================================================= */
 
 .hero {
-    height: 80vh;
+    position: relative;
+    z-index: 3;
+
     display: grid;
-    grid-template-columns: 450px 1fr;
+    grid-template-columns: 420px 1fr;
     align-items: center;
+
+    height: 100vh;
     padding: 0 50px;
-    gap: 50px;
-    background: #f5f5f5;
+    gap: 40px;
 }
 
 
 /* =========================================================
-   BUSCADOR AVANZADO (GLASSMORPHISM)
+   BUSCADOR AVANZADO
 ========================================================= */
 
 .buscador-box {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
     width: 100%;
 }
 
@@ -107,7 +207,16 @@ nav a {
     padding: 8px;
     border: 1px solid #d1d1d1;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.85);
+    font-size: 0.8rem;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #2E7D32;
 }
 
 .btn-buscar {
@@ -118,8 +227,10 @@ nav a {
     border: none;
     border-radius: 6px;
     font-weight: bold;
+    font-size: 0.95rem;
     cursor: pointer;
-    transition: transform 0.2s, background 0.3s;
+    transition: background 0.3s, transform 0.2s;
+    width: 100%;
 }
 
 .btn-buscar:hover {
@@ -129,107 +240,274 @@ nav a {
 
 
 /* =========================================================
-   HERO TEXTO
+   TEXTO HERO
 ========================================================= */
 
-.hero-content {
-    text-align: left;
+.hero-text {
+    color: white;
+    max-width: 600px;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    color: #2E7D32;
+.hero-text h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
     line-height: 1.2;
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 
-.hero-content p {
-    margin: 20px 0;
-    color: #555;
+.hero-text p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    opacity: 0.95;
 }
 
-.btn {
-    padding: 12px 30px;
+.hero-text .btn {
+    margin-top: 20px;
+    display: inline-block;
     background: #2E7D32;
     color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
     text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
+    transition: background 0.3s;
+}
+
+.hero-text .btn:hover {
+    background: #1b5e20;
 }
 
 
 /* =========================================================
-   SERVICIOS
+   SERVICIOS — SECCIÓN INDEX
 ========================================================= */
 
 .servicios {
-    padding: 60px;
+    padding: 80px 0;
     text-align: center;
+    background: #fdfdfd;
 }
 
+.servicios h2 {
+    font-size: 2.2rem;
+    color: #2E7D32;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+/* Grid de cards del index */
 .cards {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
 }
 
 .card {
     background: white;
-    padding: 30px;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
-    border-radius: 10px;
+    padding: 36px 28px;
+    border-radius: 20px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Línea superior animada */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, #2E7D32, #66BB6A);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.card:hover::before { transform: scaleX(1); }
+
+/* Card como enlace */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: #c8e6c9;
+}
+
+/* Ícono dentro de la card */
+.card-icono {
+    width: 62px;
+    height: 62px;
+    background: #e8f5e9;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: #2E7D32;
+    margin-bottom: 18px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.card:hover .card-icono {
+    background: #2E7D32;
+    color: white;
+    transform: rotate(-6deg) scale(1.1);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #1b5e20;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.65;
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+    flex: 1;
+}
+
+.card-tag {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #2E7D32;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.card:hover .card-tag {
+    background: #2E7D32;
+    color: white;
 }
 
 
+/* Badge venta/arriendo en tarjetas del index */
+.prop-badge-index {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* La tarjeta .property ya tiene position:relative puesto inline en el JS */
+
+
 /* =========================================================
-   PROPIEDADES
+   PROPIEDADES DESTACADAS — SECCIÓN INDEX
 ========================================================= */
 
 #propiedades {
-    padding: 60px;
+    padding: 70px 0;
     background: #fafafa;
+}
+
+#propiedades h2 {
+    font-size: 2rem;
+    color: #2E7D32;
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 0 20px;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+/* Mensaje cuando no hay resultados */
+.sin-resultados {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #888;
+    font-size: 1rem;
+    padding: 40px 0;
 }
 
 .property {
     background: white;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.property:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
 .property img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
     display: block;
 }
 
+.property .contenido {
+    padding: 16px 18px 18px;
+}
 
-/* =========================================================
-   BOTÓN WHATSAPP FLOTANTE
-========================================================= */
+.property h3 {
+    color: #2E7D32;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
 
-.whatsapp {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 999;
-    width: 60px;
-    height: 60px;
-    background: #25D366;
+.property p {
+    color: #555;
+    font-size: 0.88rem;
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+
+.property .boton {
+    margin-top: 12px;
+    display: inline-block;
+    background: #2E7D32;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 35px;
-    border-radius: 50%;
-    text-decoration: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+.property .boton:hover {
+    background: #1b5e20;
 }
 
 
@@ -238,7 +516,7 @@ nav a {
 ========================================================= */
 
 .mapa {
-    padding: 60px 50px;
+    padding: 70px 50px;
     background: #fafafa;
     text-align: center;
 }
@@ -247,22 +525,24 @@ nav a {
     color: #2E7D32;
     font-size: 2rem;
     margin-bottom: 25px;
-    position: relative;
 }
 
 .mapa h2::after {
     content: "";
+    display: block;
     width: 80px;
     height: 4px;
     background: #2E7D32;
-    display: block;
     margin: 10px auto 0;
     border-radius: 10px;
 }
 
 .mapa iframe {
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 100%;
+    display: block;
 }
 
 
@@ -273,272 +553,526 @@ nav a {
 footer {
     background: #1b5e20;
     color: white;
-    padding: 50px;
+    padding: 55px 50px;
     display: grid;
     grid-template-columns: 1.2fr 1fr auto;
     gap: 40px;
     align-items: start;
+    width: 100%;
 }
 
-
-/* QUIÉNES SOMOS */
 footer h3 {
     margin-bottom: 15px;
-    font-size: 1.2rem;
-    color: #fff;
+    font-size: 1.15rem;
+    color: #ffffff;
 }
 
-
-/* INFORMACIÓN DE CONTACTO */
 footer p {
-    line-height: 1.8;
+    line-height: 1.85;
     color: #e0e0e0;
+    font-size: 0.92rem;
 }
 
 footer a {
     color: white;
     text-decoration: none;
-    transition: .3s;
+    transition: color 0.3s;
 }
 
 footer a:hover {
     color: #A5D6A7;
 }
 
-
-/* REDES SOCIALES */
+/* Redes Sociales */
 .redes {
     display: flex;
-    gap: 15px;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .redes a {
-    width: 45px;
-    height: 45px;
-    background: rgba(255,255,255,.15);
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
-    transition: .3s;
+    font-size: 1.2rem;
+    transition: background 0.3s, transform 0.3s;
+    color: white;
+    text-decoration: none;
 }
 
 .redes a:hover {
     background: #4CAF50;
-    transform: translateY(-5px);
-}
-
-
-/* COPYRIGHT */
-.copyright {
-    background: #144d18;
-    text-align: center;
-    padding: 15px;
-    color: #c8e6c9;
-    font-size: .9rem;
+    transform: translateY(-4px);
 }
 
 
 /* =========================================================
-   RESPONSIVE DESIGN
+   COPYRIGHT
 ========================================================= */
 
-@media(max-width: 900px) {
+.copyright {
+    background: #144d18;
+    text-align: center;
+    padding: 14px 20px;
+    color: #c8e6c9;
+    font-size: 0.88rem;
+    width: 100%;
+}
 
+
+/* =========================================================
+   BOTÓN FLOTANTE WHATSAPP
+========================================================= */
+
+.whatsapp {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET (max 900px)
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* Header */
+    header {
+        padding: 12px 20px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    /* Hero */
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+        align-content: center;
+        height: auto;
+        min-height: 100vh;
+        padding-top: 30px;
+    }
+
+    .buscador-box {
+        width: 100%;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Secciones */
+    .servicios {
+        padding: 50px 0;
+    }
+
+    .cards {
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    #propiedades {
+        padding: 50px 0;
+    }
+
+    .grid {
+        padding: 0 20px;
+        gap: 16px;
+    }
+
+    .mapa {
+        padding: 50px 20px;
+    }
+
+    /* Footer */
     footer {
         grid-template-columns: 1fr;
         text-align: center;
+        padding: 40px 20px;
+        gap: 30px;
     }
 
     .redes {
         justify-content: center;
     }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MÓVIL (max 480px)
+========================================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding-top: 80px;
+    }
+
+    .logo img {
+        height: 55px;
+    }
+
+    nav ul {
+        gap: 6px;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .grid-form {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-buscar {
+        grid-column: span 1;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+    }
 
     .mapa {
-        padding: 40px 20px;
+        padding: 40px 16px;
+    }
+
+    footer {
+        padding: 35px 16px;
+    }
+
+    .whatsapp {
+        width: 52px;
+        height: 52px;
+        font-size: 28px;
+        bottom: 18px;
+        right: 18px;
     }
 }
 
+
 /* =========================================================
-   HEADER FIJO (STICKY PREMIUM)
+   MODAL DE DETALLE DE PROPIEDAD
+   (compartido entre index.html y propiedades.html)
 ========================================================= */
 
-header{
+.modal-overlay {
+    display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-
-    display: flex;
-    justify-content: space-between;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 2000;
     align-items: center;
-
-    padding: 15px 50px;
-
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(10px);
-
-    box-shadow: 0 2px 15px rgba(0,0,0,.08);
+    justify-content: center;
+    padding: 20px;
 }
 
-body{
-    padding-top: 90px; /* evita que el header tape contenido */
+.modal-overlay.abierto {
+    display: flex;
 }
 
-
-/* =========================================================
-   HERO PREMIUM (ESTILO INMOBILIARIA MODERNA)
-========================================================= */
-
-.hero-container{
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
-
-
-/* =========================================================
-   CARRUSEL DE FONDO (CASAS / APARTAMENTOS)
-========================================================= */
-
-.hero-slides{
-    position: absolute;
-    top: 0;
-    left: 0;
-
+.modal-box {
+    background: white;
+    border-radius: 20px;
     width: 100%;
-    height: 100%;
-
-    z-index: 1;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
 }
 
-.hero-slides img{
+.modal-cerrar {
     position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.modal-cerrar:hover { background: rgba(0, 0, 0, 0.85); }
+
+/* Galería */
+.modal-galeria {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+.modal-galeria img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    display: block;
 }
 
-.hero-slides img.active{
-    opacity: 1;
-}
-
-
-/* =========================================================
-   OVERLAY OSCURO (PARA LEGIBILIDAD)
-========================================================= */
-
-.hero-container::before{
-    content: "";
-
+.modal-badge {
     position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background: rgba(0,0,0,0.35);
-
-    z-index: 2;
-}
-
-
-/* =========================================================
-   CONTENIDO SOBRE EL HERO
-========================================================= */
-
-.hero{
-    position: relative;
-    z-index: 3;
-
-    display: grid;
-    grid-template-columns: 420px 1fr;
-
-    align-items: center;
-
-    height: 100vh;
-
-    padding: 0 50px;
-    gap: 40px;
-}
-
-
-/* =========================================================
-   BUSCADOR FLOTANTE (GLASS PREMIUM)
-========================================================= */
-
-.buscador-box{
-    background: rgba(255,255,255,0.75);
-    backdrop-filter: blur(15px);
-
+    top: 16px;
+    left: 16px;
+    padding: 6px 18px;
     border-radius: 20px;
-
-    padding: 25px;
-
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 3;
 }
 
+.badge-venta    { background: #2E7D32; color: white; }
+.badge-arriendo { background: #1565C0; color: white; }
 
-/* =========================================================
-   TEXTO HERO PREMIUM
-========================================================= */
-
-.hero-text{
+.gal-prev,
+.gal-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.45);
     color: white;
-    max-width: 600px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 4;
 }
 
-.hero-text h1{
-    font-size: 3.2rem;
+.gal-prev { left: 14px; }
+.gal-next { right: 14px; }
+.gal-prev:hover, .gal-next:hover { background: rgba(0, 0, 0, 0.78); }
+
+.gal-puntos {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 7px;
+    z-index: 4;
+}
+
+.gal-punto {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.gal-punto.activo { background: white; }
+
+/* Info del modal */
+.modal-info { padding: 26px 30px 30px; }
+
+.modal-header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.modal-header-info h2 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.modal-ubicacion {
+    color: #888;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.modal-ubicacion i { color: #2E7D32; }
+
+.modal-precio {
+    color: #2E7D32;
+    font-size: 1.6rem;
     font-weight: 800;
-    text-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    white-space: nowrap;
 }
 
-.hero-text p{
-    font-size: 1.2rem;
-    margin-top: 15px;
-    opacity: 0.95;
+/* Chips */
+.modal-chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
 }
 
+.chip {
+    background: #f0f7f0;
+    color: #2E7D32;
+    border: 1px solid #c8e6c9;
+    padding: 5px 13px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
-/* BOTÓN HERO */
-.hero-text .btn{
-    margin-top: 20px;
-    display: inline-block;
+.modal-descripcion {
+    color: #555;
+    font-size: 0.93rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 16px;
+}
 
-    background: #2E7D32;
+/* Tabla de características */
+.modal-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.caract-item {
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 11px 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.caract-label {
+    font-size: 0.72rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.caract-valor {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #222;
+}
+
+/* Botones del modal */
+.modal-acciones {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-modal-wa {
+    flex: 1;
+    background: #25D366;
     color: white;
-
-    padding: 12px 25px;
-    border-radius: 8px;
-
-    font-weight: bold;
+    text-decoration: none;
+    padding: 13px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.93rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
 }
 
+.btn-modal-wa:hover { background: #1ebe5d; transform: scale(1.02); }
 
-/* =========================================================
-   RESPONSIVE HERO
-========================================================= */
-
-@media(max-width: 900px){
-
-    .hero{
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .buscador-box{
-        width: 100%;
-    }
-
-    .hero-text h1{
-        font-size: 2.2rem;
-    }
+.btn-modal-contacto {
+    flex: 1;
+    background: white;
+    color: #2E7D32;
+    border: 2px solid #2E7D32;
+    text-decoration: none;
+    padding: 13px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.93rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.3s, color 0.3s;
 }
+
+.btn-modal-contacto:hover { background: #2E7D32; color: white; }
+
+/* Responsive modal */
+@media (max-width: 600px) {
+    .modal-galeria { height: 220px; }
+    .modal-info { padding: 16px; }
+    .modal-caracteristicas { grid-template-columns: repeat(2, 1fr); }
+    .modal-acciones { flex-direction: column; }
+    .modal-header-info { flex-direction: column; gap: 6px; }
+}
+

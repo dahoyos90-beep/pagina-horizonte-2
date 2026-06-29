@@ -1,331 +1,277 @@
 <!DOCTYPE html>
 <html lang="es">
 
+<!-- =========================================
+     HEAD
+========================================= -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Propiedades | Horizonte Urbano Inmobiliaria</title>
 
+    <!-- CSS Principal (header, footer, whatsapp, etc.) -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <style>
+    <!-- CSS exclusivo de propiedades -->
+    <link rel="stylesheet" href="css/propiedades.css">
 
-        .banner{
-            background:#2E7D32;
-            color:white;
-            text-align:center;
-            padding:50px 20px;
-        }
-
-        .banner h1{
-            font-size:40px;
-            margin-bottom:10px;
-        }
-
-        .filtros{
-            padding:30px;
-            background:#f5f5f5;
-            display:flex;
-            gap:15px;
-            flex-wrap:wrap;
-            justify-content:center;
-        }
-
-        .filtros input,
-        .filtros select{
-            padding:12px;
-            width:250px;
-            border:1px solid #ccc;
-            border-radius:5px;
-        }
-
-        .filtros button{
-            background:#2E7D32;
-            color:white;
-            border:none;
-            padding:12px 25px;
-            cursor:pointer;
-            border-radius:5px;
-        }
-
-        .contenedor-propiedades{
-            max-width:1300px;
-            margin:auto;
-            padding:50px 20px;
-        }
-
-        .grid-propiedades{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-            gap:25px;
-        }
-
-        .propiedad{
-            background:white;
-            border-radius:12px;
-            overflow:hidden;
-            box-shadow:0px 3px 10px rgba(0,0,0,0.15);
-            transition:.3s;
-        }
-
-        .propiedad:hover{
-            transform:translateY(-5px);
-        }
-
-        .propiedad img{
-            width:100%;
-            height:250px;
-            object-fit:cover;
-        }
-
-        .contenido{
-            padding:20px;
-        }
-
-        .precio{
-            color:#2E7D32;
-            font-size:24px;
-            font-weight:bold;
-            margin-bottom:10px;
-        }
-
-        .titulo{
-            font-size:22px;
-            margin-bottom:10px;
-        }
-
-        .ubicacion{
-            color:gray;
-            margin-bottom:15px;
-        }
-
-        .detalles{
-            display:flex;
-            justify-content:space-between;
-            margin-bottom:20px;
-        }
-
-        .boton{
-            width:100%;
-            background:#2E7D32;
-            color:white;
-            border:none;
-            padding:12px;
-            cursor:pointer;
-            border-radius:5px;
-            font-size:16px;
-        }
-
-        .boton:hover{
-            background:#256728;
-        }
-
-        .whatsapp{
-            position:fixed;
-            right:20px;
-            bottom:20px;
-            width:60px;
-            height:60px;
-            background:#25D366;
-            color:white;
-            border-radius:50%;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-decoration:none;
-            font-size:30px;
-        }
-
-    </style>
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
+
+<!-- =========================================
+     HEADER
+========================================= -->
 <header>
 
     <div class="logo">
-        <img src="img/logo.png" alt="Horizonte Urbano">
+        <img src="img/logo.jpg" alt="Horizonte Urbano Inmobiliaria">
     </div>
 
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="propiedades.html">Propiedades</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="propiedades.html" class="active">Propiedades</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contáctenos</a></li>
         </ul>
     </nav>
 
 </header>
 
-<section class="banner">
-    <h1>Propiedades Disponibles</h1>
-    <p>Encuentra la propiedad ideal para ti</p>
+
+<!-- =========================================
+     HERO / BANNER
+========================================= -->
+<section class="prop-hero">
+    <div class="prop-hero-overlay"></div>
+    <div class="prop-hero-content">
+        <h1>Propiedades Disponibles</h1>
+        <p>Encuentra la propiedad ideal para ti en el Eje Cafetero</p>
+    </div>
 </section>
 
-<section class="filtros">
 
-    <input type="text" placeholder="Ciudad">
+<!-- =========================================
+     FILTROS AVANZADOS
+========================================= -->
+<section class="prop-filtros">
 
-    <select>
-        <option>Tipo de inmueble</option>
-        <option>Casa</option>
-        <option>Apartamento</option>
-        <option>Lote</option>
-        <option>Local Comercial</option>
-    </select>
+    <div class="filtros-grid">
 
-    <select>
-        <option>Operación</option>
-        <option>Venta</option>
-        <option>Arriendo</option>
-    </select>
-
-    <button>Buscar</button>
-
-</section>
-
-<section class="contenedor-propiedades">
-
-    <div class="grid-propiedades">
-
-        <div class="propiedad">
-
-            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
-
-            <div class="contenido">
-
-                <div class="precio">
-                    $450.000.000
-                </div>
-
-                <div class="titulo">
-                    Casa Campestre
-                </div>
-
-                <div class="ubicacion">
-                    Armenia - Quindío
-                </div>
-
-                <div class="detalles">
-                    <span>4 Habitaciones</span>
-                    <span>3 Baños</span>
-                </div>
-
-                <button class="boton">
-                    Ver Detalles
-                </button>
-
-            </div>
-
+        <div class="filtro-campo">
+            <label for="f-ciudad"><i class="fas fa-map-marker-alt"></i> Ciudad</label>
+            <input type="text" id="f-ciudad" placeholder="Ej: Armenia">
         </div>
 
-        <div class="propiedad">
-
-            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
-
-            <div class="contenido">
-
-                <div class="precio">
-                    $280.000.000
-                </div>
-
-                <div class="titulo">
-                    Apartamento Moderno
-                </div>
-
-                <div class="ubicacion">
-                    Pereira - Risaralda
-                </div>
-
-                <div class="detalles">
-                    <span>3 Habitaciones</span>
-                    <span>2 Baños</span>
-                </div>
-
-                <button class="boton">
-                    Ver Detalles
-                </button>
-
-            </div>
-
+        <div class="filtro-campo">
+            <label for="f-departamento"><i class="fas fa-map"></i> Departamento</label>
+            <input type="text" id="f-departamento" placeholder="Ej: Quindío">
         </div>
 
-        <div class="propiedad">
-
-            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858">
-
-            <div class="contenido">
-
-                <div class="precio">
-                    $520.000.000
-                </div>
-
-                <div class="titulo">
-                    Local Comercial
-                </div>
-
-                <div class="ubicacion">
-                    Cali - Valle
-                </div>
-
-                <div class="detalles">
-                    <span>180 m²</span>
-                    <span>Centro</span>
-                </div>
-
-                <button class="boton">
-                    Ver Detalles
-                </button>
-
-            </div>
-
+        <div class="filtro-campo">
+            <label for="f-tipo"><i class="fas fa-home"></i> Tipo de inmueble</label>
+            <select id="f-tipo">
+                <option value="">Todos</option>
+                <option value="Casa">Casa</option>
+                <option value="Apartamento">Apartamento</option>
+                <option value="Local">Local Comercial</option>
+                <option value="Lote">Lote</option>
+                <option value="Finca">Finca</option>
+            </select>
         </div>
 
-        <div class="propiedad">
+        <div class="filtro-campo">
+            <label for="f-operacion"><i class="fas fa-handshake"></i> Operación</label>
+            <select id="f-operacion">
+                <option value="">Venta y Arriendo</option>
+                <option value="Venta">Venta</option>
+                <option value="Arriendo">Arriendo</option>
+            </select>
+        </div>
 
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750">
+        <div class="filtro-campo">
+            <label for="f-habitaciones"><i class="fas fa-bed"></i> Habitaciones</label>
+            <select id="f-habitaciones">
+                <option value="">Cualquiera</option>
+                <option value="1">1+</option>
+                <option value="2">2+</option>
+                <option value="3">3+</option>
+                <option value="4">4+</option>
+                <option value="5">5+</option>
+            </select>
+        </div>
 
-            <div class="contenido">
+        <div class="filtro-campo">
+            <label for="f-precio-min"><i class="fas fa-dollar-sign"></i> Precio mínimo</label>
+            <input type="number" id="f-precio-min" placeholder="Ej: 100000000" min="0">
+        </div>
 
-                <div class="precio">
-                    $650.000.000
-                </div>
+        <div class="filtro-campo">
+            <label for="f-precio-max"><i class="fas fa-dollar-sign"></i> Precio máximo</label>
+            <input type="number" id="f-precio-max" placeholder="Ej: 800000000" min="0">
+        </div>
 
-                <div class="titulo">
-                    Casa de Lujo
-                </div>
-
-                <div class="ubicacion">
-                    Medellín - Antioquia
-                </div>
-
-                <div class="detalles">
-                    <span>5 Habitaciones</span>
-                    <span>4 Baños</span>
-                </div>
-
-                <button class="boton">
-                    Ver Detalles
-                </button>
-
-            </div>
-
+        <div class="filtro-campo filtro-btn">
+            <button id="btnFiltrar" class="btn-filtrar">
+                <i class="fas fa-search"></i> Buscar
+            </button>
+            <button id="btnLimpiar" class="btn-limpiar">
+                <i class="fas fa-times"></i> Limpiar
+            </button>
         </div>
 
     </div>
 
 </section>
 
-<a
-href="https://wa.me/573186566817?text=Hola%20quiero%20información%20sobre%20una%20propiedad"
-class="whatsapp">
 
-💬
+<!-- =========================================
+     TABS: VENTA / ARRIENDO / TODOS
+========================================= -->
+<section class="prop-tabs-section">
 
+    <div class="prop-tabs">
+        <button class="tab active" data-tab="todos">
+            <i class="fas fa-th"></i> Todos
+        </button>
+        <button class="tab" data-tab="Venta">
+            <i class="fas fa-tag"></i> En Venta
+        </button>
+        <button class="tab" data-tab="Arriendo">
+            <i class="fas fa-key"></i> En Arriendo
+        </button>
+    </div>
+
+    <div class="prop-contador">
+        Mostrando <span id="contadorResultados">0</span> propiedades
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     GRID DE PROPIEDADES
+========================================= -->
+<section class="prop-contenedor">
+    <div class="prop-grid" id="gridPropiedades">
+        <!-- Las tarjetas se insertan desde propiedades.js -->
+    </div>
+</section>
+
+
+<!-- =========================================
+     MODAL DE DETALLE
+========================================= -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" id="modalBox">
+
+        <button class="modal-cerrar" id="modalCerrar">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <!-- Galería de fotos -->
+        <div class="modal-galeria">
+            <img id="modalFotoActiva" src="" alt="">
+            <button class="gal-prev" id="galPrev"><i class="fas fa-chevron-left"></i></button>
+            <button class="gal-next" id="galNext"><i class="fas fa-chevron-right"></i></button>
+            <div class="gal-puntos" id="galPuntos"></div>
+            <!-- Badge operación -->
+            <span class="modal-badge" id="modalBadge"></span>
+        </div>
+
+        <!-- Información -->
+        <div class="modal-info">
+
+            <div class="modal-header-info">
+                <div>
+                    <h2 id="modalTitulo"></h2>
+                    <p class="modal-ubicacion"><i class="fas fa-map-marker-alt"></i> <span id="modalUbicacion"></span></p>
+                </div>
+                <div class="modal-precio" id="modalPrecio"></div>
+            </div>
+
+            <div class="modal-chips" id="modalChips"></div>
+
+            <p class="modal-descripcion" id="modalDescripcion"></p>
+
+            <div class="modal-caracteristicas" id="modalCaracteristicas"></div>
+
+            <div class="modal-acciones">
+                <a id="modalWhatsapp" href="#" target="_blank" rel="noopener" class="btn-modal-wa">
+                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                </a>
+                <a href="contacto.html" class="btn-modal-contacto">
+                    <i class="fas fa-envelope"></i> Enviar mensaje
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+<footer>
+
+    <div class="quienes-somos">
+        <h3>Quiénes Somos</h3>
+        <p>Somos una inmobiliaria con experiencia en venta, alquiler y administración
+           de propiedades en Armenia, Quindío.</p>
+    </div>
+
+    <div class="contacto">
+        <h3>Ubicación y Contacto</h3>
+        <p>Calle 19 #14 - 17 Oficina 502 y 503,<br>
+           Edificio Suramericana, Armenia - Quindío</p>
+        <p>Tel: <a href="tel:+573186566817">+57 318 656 6817</a></p>
+        <p>Email: <a href="mailto:horizonteurbano@gmail.com">horizonteurbano@gmail.com</a></p>
+    </div>
+
+    <div class="redes">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/573186566817" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     COPYRIGHT
+========================================= -->
+<div class="copyright">
+    © 2026 Horizonte Urbano Inmobiliaria | Todos los derechos reservados
+</div>
+
+
+<!-- =========================================
+     BOTÓN FLOTANTE WHATSAPP
+========================================= -->
+<a href="https://wa.me/573186566817"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
 </a>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+<script src="propiedades.js"></script>
 
 </body>
 </html>

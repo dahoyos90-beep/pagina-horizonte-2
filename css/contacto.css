@@ -1,0 +1,430 @@
+/* =========================================================
+   CONTACTO.CSS — Estilos exclusivos de la página Contacto
+========================================================= */
+
+
+/* =========================================================
+   HERO CONTACTO
+========================================================= */
+
+.con-hero {
+    position: relative;
+    height: 340px;
+    background: url('../img/2.jpg') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.con-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.con-hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.con-hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 12px;
+}
+
+.con-hero-content p {
+    font-size: 1.15rem;
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   SECCIÓN REDES SOCIALES
+========================================================= */
+
+.con-redes {
+    padding: 65px 80px;
+    background: #f5f9f5;
+    text-align: center;
+}
+
+.con-redes h2 {
+    font-size: 2rem;
+    color: #2E7D32;
+    margin-bottom: 10px;
+}
+
+.con-redes-sub {
+    color: #777;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+.redes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.red-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 20px;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.red-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.red-card > i {
+    font-size: 2rem;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.red-card > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.red-nombre {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.red-usuario {
+    font-size: 0.82rem;
+    opacity: 0.85;
+}
+
+.red-desc {
+    font-size: 0.78rem;
+    opacity: 0.75;
+    line-height: 1.4;
+    margin-top: 2px;
+}
+
+/* Colores de cada red */
+.red-facebook  { background: #1877F2; color: white; }
+.red-instagram { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
+.red-tiktok    { background: #010101; color: white; }
+.red-whatsapp  { background: #25D366; color: white; }
+
+
+/* =========================================================
+   SECCIÓN PRINCIPAL: INFO + FORMULARIO
+========================================================= */
+
+.con-main {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 50px;
+    padding: 70px 80px;
+    background: #ffffff;
+    align-items: start;
+}
+
+
+/* =========================================================
+   INFORMACIÓN DE CONTACTO
+========================================================= */
+
+.con-info h2 {
+    font-size: 1.8rem;
+    color: #2E7D32;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.con-info h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: #2E7D32;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.info-icono {
+    width: 46px;
+    height: 46px;
+    background: #e8f5e9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #2E7D32;
+    flex-shrink: 0;
+}
+
+.info-item strong {
+    display: block;
+    color: #1b5e20;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: #555;
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+.info-item a {
+    color: #2E7D32;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-item a:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
+
+.btn-whatsapp-grande {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 10px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp-grande i {
+    font-size: 1.4rem;
+}
+
+.btn-whatsapp-grande:hover {
+    background: #1ebe5d;
+    transform: scale(1.02);
+}
+
+
+/* =========================================================
+   FORMULARIO DE CONTACTO
+========================================================= */
+
+.con-form h2 {
+    font-size: 1.8rem;
+    color: #2E7D32;
+    margin-bottom: 8px;
+}
+
+.form-sub {
+    color: #777;
+    font-size: 0.92rem;
+    margin-bottom: 28px;
+}
+
+.form-fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-campo label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #2E7D32;
+    margin-bottom: 6px;
+}
+
+.form-campo input,
+.form-campo select,
+.form-campo textarea {
+    padding: 11px 14px;
+    border: 1.5px solid #d1d1d1;
+    border-radius: 8px;
+    font-size: 0.93rem;
+    color: #333;
+    background: #fafafa;
+    outline: none;
+    transition: border-color 0.25s, background 0.25s;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+}
+
+.form-campo input:focus,
+.form-campo select:focus,
+.form-campo textarea:focus {
+    border-color: #2E7D32;
+    background: #ffffff;
+}
+
+.form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.form-check input[type="checkbox"] {
+    margin-top: 3px;
+    width: 16px;
+    height: 16px;
+    accent-color: #2E7D32;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.form-check label {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.form-check label a {
+    color: #2E7D32;
+    text-decoration: underline;
+}
+
+.btn-enviar {
+    width: 100%;
+    background: #2E7D32;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-enviar:hover {
+    background: #1b5e20;
+    transform: scale(1.01);
+}
+
+.btn-enviar:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Mensajes de estado */
+.msg-exito,
+.msg-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 0.93rem;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+.msg-exito {
+    background: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #a5d6a7;
+}
+
+.msg-error {
+    background: #ffebee;
+    color: #b71c1c;
+    border: 1px solid #ef9a9a;
+}
+
+.msg-exito i,
+.msg-error i {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+    .redes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+
+    .con-hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .con-redes {
+        padding: 40px 25px;
+    }
+
+    .con-main {
+        grid-template-columns: 1fr;
+        padding: 40px 25px;
+        gap: 40px;
+    }
+
+    .form-fila {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .con-hero {
+        height: 260px;
+    }
+
+    .con-hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .redes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .red-card {
+        flex-direction: row;
+    }
+}
